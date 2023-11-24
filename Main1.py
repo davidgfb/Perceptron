@@ -25,9 +25,6 @@ class Neuron: # neural network
     def __init__(self, num_inputs):        
         self.weights, self.bias = [random()-0.5 for i in range(num_inputs)],\
                                   0.0 #no puede ser tupla
-
-        print(self.weights)
-      
         self.z_cache, self.inputs_cache = None, None # caches
 
     def forward(self, inputs):
