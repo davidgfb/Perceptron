@@ -9,7 +9,7 @@ def z(a, w, b):
 def f_Error(predi, obj): 
     return (d_F_Error(predi, obj)) ** 2 / 2
 
-def f_Act(a, w, b, tipo = 0): 
+def f_Act(a, w, b, tipo = 0): #normaliza valores en [0, 1]
     _Z = z(a, w, b)
     f_Act = 1 / (1 + exp(-_Z)) #sigmoide
 
