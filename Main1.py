@@ -2,7 +2,8 @@
 from math import exp
 from numpy import array, round
 
-a, w, b, y, eps, sig_r, r = 0.1, 0.5, 1.83, 0.03, 6, 0, int(1e3)
+a, w, b, y, eps, sig_r, r, MSEs = 0.1, 0.5, 1.83, 0.03, 6, 0,
+    int(1e3), []
 #eps valor dorado #sig rdada
  
 for i in range(r):    
@@ -12,10 +13,15 @@ for i in range(r):
     b += gradMSE_dy  
     w += a * gradMSE_dy * (1 + sig * (1 - sig))
 
+    MSEs.append(round((sig-y)**2/2,2))
+ 
     sig_r = round(sig,2)
     if sig_r == y: break
-                
-print('eps:', eps, 'N:', i, 'sig:', sig_r, 'debe ser eps: 6 N: 4 sig: 0.03') 
+
+plot(MSEs, 'o-')
+show()
+
+#print('eps:', eps, 'N:', i, 'sig:', sig_r, 'debe ser eps: 6 N: 4 sig: 0.03') 
 
 '''TODO: 
 q el programa determine el valor dorado
