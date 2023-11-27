@@ -2,7 +2,7 @@
 from math import exp
 from numpy import array, round
 
-a, w, b, y, eps, sig_r, r, MSEs = 0.1, 0.5, 1.83, 0.03, 6, 0,
+a, w, b, y, eps, sig_r, r, MSEs = 0.1, 0.5, 1.83, 0.03, 6, 0,\
     int(1e3), []
 #eps valor dorado #sig rdada
  
