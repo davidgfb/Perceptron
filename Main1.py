@@ -7,10 +7,10 @@ a, w, b, y, eps, sig_r, r = 0.1, 0.5, 1.83, 0.03, 6, 0, int(1e3)
  
 for i in range(r):    
     sig = 1/(1+exp(-(a*w+b)))
-    y_msig = y-sig
-    upd = eps * y_msig
-    b += upd  
-    w += a * (upd + eps * y_msig * sig * (1 - sig))
+    dMSE_dy = y-sig
+    gradMSE_dy = eps * dMSE_dy
+    b += gradMSE_dy  
+    w += a * gradMSE_dy * (1 + sig * (1 - sig))
 
     sig_r = round(sig,2)
     if sig_r == y: break
