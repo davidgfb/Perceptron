@@ -17,4 +17,7 @@ for i in range(r):
                 
 print('eps:', eps, 'N:', i, 'sig:', sig_r, 'debe ser eps: 6 N: 4 sig: 0.03') 
 
-#TODO: q el programa determine el valor dorado
+'''TODO: 
+q el programa determine el valor dorado
+c = y_msig**2/2 #repr error en matplotlib
+'''
