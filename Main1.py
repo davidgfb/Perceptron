@@ -8,8 +8,7 @@ a, w, b, y, eps, sig_r, r, MSEs = 0.1, 0.5, 1.83, 0.03, 6, 0,\
  
 for i in range(r):    
     sig = 1/(1+exp(-(a*w+b)))
-    dMSE_dy = y-sig
-    gradMSE_dy = eps * dMSE_dy
+    gradMSE_dy = eps * (y-sig) #dMSE_dy
     b += gradMSE_dy  
     w += a * gradMSE_dy * (1 + sig * (1 - sig))
 
