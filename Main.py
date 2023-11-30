@@ -4,13 +4,13 @@ from math import exp
 from matplotlib.pyplot import plot,show
 
 ##[-1...1]=[-1,1]?
-sem = 0.97
-#sem = round(random(),2)
+#sem = 0.97
+sem = round(random(),2)
 
 seed(sem)
 
 (a,w,b,y), eps, errs, debug, adagrad =\
-           (*(random() for i in range(4)),), 1, [], 0, 0
+           (*(random() for i in range(4)),), 1e-1, [], 0, 0
 
 print('sem, eps =',round(sem,2), eps)
 
